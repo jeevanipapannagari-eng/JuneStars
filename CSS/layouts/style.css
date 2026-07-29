@@ -1,0 +1,53 @@
+/*
+1. flex layout(1-D)
+2. grid layout(2-D)
+3. float layout(left,right)
+
+
+flexbox: 
+1. flex container
+2. flex items
+*/
+
+.box{
+    width:210px;
+    height: 100px;
+    background-color: red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow: 1; */
+}
+.container{
+    /* display: flex;
+    justify-content: start;
+    background-color: aqua;
+    flex-direction: row;
+    align-items: start;
+    height: 400px;
+    flex-wrap: wrap;
+    column-gap: 20px; */
+    display: grid;
+    grid-template-columns:repeat(6,1fr);
+    gap: 20px;
+}
+.box1{
+    /* flex-grow: 1; */
+    /* flex-shrink: 1;
+    order: 2; */
+}
+.box2{
+    /* flex-grow: 1; */
+    /* flex-shrink: 2;
+    flex-basis: 400px;
+    order: 3; */
+
+}
+.box3{
+    /* flex-grow: 1; */
+    /* flex-shrink: 3;
+    order: 1; */
+
+
+}

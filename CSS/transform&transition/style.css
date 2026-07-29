@@ -1,0 +1,33 @@
+/*
+
+transform: translate(x,y)---move elements from its original position
+
+
+*/
+
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    transition-duration: 2s;
+    /* transition-delay: 2s; */
+    transition-property: all;
+    transition-timing-function:ease-out ;
+    transition: property duration timing-function delay;
+   
+    /* transform: translateX(100px); */
+    /* transform: translateY(100px); */
+    /* transform: translateZ(100px); */
+    /* transform: translate3d(100px,100px,100px); */
+}
+.box:hover{
+     /* transform: translateY(-5px);
+     transform: scale(0.5);
+     transform: rotateY(360deg); */
+     transform: rotate(360deg);
+     background-color: green;
+     
+}

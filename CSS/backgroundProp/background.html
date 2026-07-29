@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Background Properties</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* ===========================
+        COMMON STYLES
+=========================== */
+
+section{
+    padding:60px;
+}
+
+h1,h2{
+    margin-bottom:20px;
+}
+
+.demo-box{
+    width:250px;
+    height:180px;
+    margin:20px;
+    border:8px solid #333;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    border-radius:10px;
+}
+
+/* ===========================
+    1. BACKGROUND COLOR
+=========================== */
+
+.color-demo{
+
+    background-color:#2196F3;
+
+}
+
+
+/* ===========================
+    2. BACKGROUND IMAGE
+=========================== */
+
+.image-demo{
+
+    background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600");
+
+    background-size:cover;
+
+}
+
+
+/* ===========================
+    3. BACKGROUND REPEAT
+=========================== */
+
+.repeat-demo{
+
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+    background-repeat:repeat;
+
+    color:black;
+
+}
+
+
+/* ===========================
+    4. BACKGROUND POSITION
+=========================== */
+
+.position-demo{
+
+    background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600");
+
+    background-repeat:no-repeat;
+
+    background-position:right bottom;
+
+    background-size:180px;
+
+}
+
+
+/* ===========================
+    5. BACKGROUND SIZE
+=========================== */
+
+.size-demo{
+
+    background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600");
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+}
+
+
+/* ===========================
+    6. BACKGROUND ORIGIN
+=========================== */
+
+.origin-demo{
+
+    background-image:url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+
+    background-origin:content-box;
+
+    color:black;
+
+}
+
+
+/* ===========================
+    7. BACKGROUND CLIP
+=========================== */
+
+.clip-text{
+
+    font-size:70px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    background-image:linear-gradient(to right,#ff512f,#dd2476);
+
+    color:transparent;
+
+    -webkit-background-clip:text;
+
+}
+
+
+/* ===========================
+      HERO SECTION
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
+
+    background-attachment:fixed;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-top:15px;
+
+}
+
+
+/* ===========================
+      LOGIN FORM
+=========================== */
+
+.login-section{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600")
+    center/cover
+    no-repeat
+    fixed;
+
+}
+
+form{
+
+    width:350px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+form h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border:none;
+
+    border-radius:5px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#2196F3;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+
+/* ===========================
+      CARD
+=========================== */
+
+.card-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px;
+
+}
+
+.card{
+
+    width:300px;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    color:white;
+
+    text-align:center;
+
+    background:
+    linear-gradient(135deg,#667eea,#764ba2);
+
+}
+
+
+/* ===========================
+      SERVICES
+=========================== */
+
+.services{
+
+    padding:120px;
+
+    color:white;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600")
+    center/cover
+    no-repeat;
+
+}
+
+
+/* ===========================
+      DEMO GRID
+=========================== */
+
+.grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>CSS Background Properties</h1>
+
+<p>Professional Live Demonstration</p>
+
+</section>
+
+
+<!-- PROPERTY DEMOS -->
+
+<section>
+
+<h1 align="center">Background Property Examples</h1>
+
+<div class="grid">
+
+<div class="demo-box color-demo">
+
+background-color
+
+</div>
+
+<div class="demo-box image-demo">
+
+background-image
+
+</div>
+
+<div class="demo-box repeat-demo">
+
+background-repeat
+
+</div>
+
+<div class="demo-box position-demo">
+
+background-position
+
+</div>
+
+<div class="demo-box size-demo">
+
+background-size
+
+</div>
+
+<div class="demo-box origin-demo">
+
+background-origin
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLIP -->
+
+<section>
+
+<h1 class="clip-text">
+
+BACKGROUND CLIP
+
+</h1>
+
+</section>
+
+
+<!-- LOGIN -->
+
+<section class="login-section">
+
+<form>
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Enter Email">
+
+<input type="password" placeholder="Enter Password">
+
+<button>
+
+Login
+
+</button>
+
+</form>
+
+</section>
+
+
+<!-- CARD -->
+
+<section class="card-section">
+
+<div class="card">
+
+<h2>Premium Plan</h2>
+
+<br>
+
+<h1>₹999</h1>
+
+<br>
+
+<p>Unlimited Access</p>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<h1>Our Services</h1>
+
+<br>
+
+<p>
+
+HTML • CSS • JavaScript • React • UI Design
+
+</p>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+/*
+WHat is Position in CSS:
+position is used to control the where an element should appear in the webpage
+
+by defaut, HTML elements appear one after another, how wvwr the document flow will be there
+
+by using the position property::after-move elements anywhere in webpage
+-fix elements on screen(fixed)
+-overlay the elements(relative)
+-create badges(absolute)
+-create sticky menus(sticky)
+
+
+with out positions: 
+
+
+
+1.\\types of position: 
+1. static 
+2. realative
+3. absolute
+4. fixed
+5. sticky 
+
+
+1. static: 
+default position in HTML element
+-static is going to start from 0X0 browser
+-top,bottom,left,right properties are not going to works for the stativc position
+
+
+position:value;
+
+2. relative:
+moves from it origina position(relative to its original position)
+-it going to accupie the space(reserved for that element)
+
+3. absolute: 
+-position is going to depends on its parent
+*/
+
+.box{
+    width: 150px;
+    height: 150px;
+
+}
+.static{
+    background-color: green;
+    position: static;
+    left:200px;
+}
+.relative{
+
+    position: relative;
+    background-color: aquamarine;
+    top:100px;
+    left: 100px;
+}
+.absolute{
+    background-color: red;
+    position: absolute;
+    top: 100px;
+}
+.parent{
+    background-color: gray;
+    height: 300px;
+    position: relative;
+    width: 50%;
+    left: 200px;
+    z-index: 100;
+}
+.fixed{
+    background-color: brown;
+    position: fixed;
+    top:100px;
+    left:500px;
+}
+.sticky{
+    background-color: orangered;
+    position: sticky;
+    top: 400px;
+}

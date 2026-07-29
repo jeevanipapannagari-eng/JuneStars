@@ -1,0 +1,217 @@
+/*
+what is css: 
+ CSS is used to design tand style the HTML elements
+
+ Why: 
+
+ without css: 
+ 1. website looks like document
+
+ with css: website looks attractive
+
+ 1. improve the UI design
+ 2. reusability of styles
+ 3. easy maintance
+ 4. responsive design
+
+ types CSS: 
+ 1. inline CSS
+    written directly inside HTML tag using style attribute
+
+    syntax:
+        <tag style="property:value"></tag>
+
+        advantages: 
+            1. Quick changes
+            2. easy for biggeners
+            3. no separate file needed
+        disAdvantages: 
+            1.; 1. repeated code
+            2. difficult to debug and maintance
+            3. not suitable for large projects
+            4. mixws the HTML and CSS code
+
+
+ 2. internal CSS
+    CSS is written inside the STyle tag
+
+    syntax: 
+        <head>
+        <style>
+        styles</style>
+        </head>
+
+        advantages:
+         1. code reusability in same file
+         2. CSS and HTML in same file the sepearatee
+         3. betterThan inline CSS
+         4. suitable small projects
+
+         dis advanges: 
+            1. not suitable for large projects
+            2. cannot reuse in other Pages/files
+            3. code become large
+ 3. external CSS
+    CSS is written in sperate css file
+
+    syntax: 
+
+    index.html
+    style.css
+
+    <link rel="relation of two files" href="css file path">
+
+    advantages: 
+    1. better than inline and internal CSS
+    2. best for lrge projects
+    3. faster development
+    4. code reusable across all files
+
+    dis advanges: 
+    1. required to create seperate css file
+    2. extra HTTP rerquest
+
+
+
+    WHat is selector: 
+        types of selectors : 
+            1. universal Selector(*)-----Selects All Elements in file
+            2. elemet selctor / tag selector(tag name)-----targets the all ements of same tag
+            3. class selector (.clasName)---targets the multiple elements using class attribute
+            4. ID selector(#)------targets a single unique element
+            5. group selector(,)-----apply same styles to multiple elements
+            6. pseudo class selector(:)---when ever we wanrt t chamge the state of the element or position of the elent
+            :hover-------change the state of an element while pacing curser on elem,ent 
+            :focus----from 
+            :acttive---applies styles when user clicked on a element
+            :visited---styles visted links
+            :link-----unvisited links
+            :first-child-----target fist child of an element
+            :checked------targets the checked checkbox/radio button
+            7. pseudo elemment selector(::)---we even we ant to change specic part of an element 
+                    syntax: 
+
+                    selector::speudo-elemet{
+                    peoperty:value;
+}
+
+::before---adds the content before element
+            8. combination selectors: 
+                1. child selectors
+                    1. direct child selector(>)
+                    2. indirect child selector/descendent chhild selector(space)
+                2. sibling selectors
+                    1. adcent sibling selctor(+)
+                    2. genaral sibling selector(~)
+*/          
+
+/* h2{
+    background-color: blue;
+    color: white;
+}
+
+p{
+    background-color: yellow;
+    font-size: 30px;
+}
+
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+input{
+    border: 2px solid red;
+    margin-left: 40px;
+
+}
+p{
+    margin: 20px;
+}
+.odd{
+    color:red;
+}
+.even{
+    color:green;
+}
+#anchor{
+    text-decoration:overline ;
+} */
+
+.red,#red{
+    color: red;
+    font-family: arial;
+    background-color: blue;
+}
+#red:hover{
+    background-color: red;
+    color: blue;
+}
+.input{
+    outline: none;
+}
+.input:focus{
+    border: 2px solid blue;
+    background-color: aquamarine;
+}
+#red:active{
+    color: green;
+}
+.red:active{
+font-size: 20px;
+background-color: green;
+}
+
+a:link{
+    color: red;
+    
+}
+a:visited{
+    color: green;
+    
+}
+li:nth-child(2n+1){
+    color: red;
+}
+
+input:checked{
+    width: 100px;
+    height: 100px;
+}
+.text::after{
+    content:"Before the element "
+}
+.para2::first-letter{
+    color:red;
+    font-size: 30px;
+}
+.para2::first-line{
+    background-color: blue;
+    color: white;
+}
+.para2::selection{
+    background-color: red;
+    color: rgb(9, 3, 92);
+}
+li::marker{
+    color:red;
+    font-size: 30px;
+}
+input::placeholder{
+    color:red;
+    font-size: 30px;
+}
+
+/* .ceo p{
+    color:red;
+} */
+.ceo>.manager,.HR{
+    color:blue;
+}
+
+.emp4+.emp5{
+    color: rgb(126, 7, 128);
+}
+.div>p+span{
+    text-decoration: line-through;
+}

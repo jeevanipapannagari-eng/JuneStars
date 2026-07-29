@@ -1,0 +1,94 @@
+/*
+WHatv is ANimation
+
+1. loadeing effect
+2. notification
+carousels
+4. typing effect
+heart beat effetct
+
+@keyframes animationName{
+from{}
+to{}
+0%{}
+20%{}
+50%{}
+75%{}
+100%{}
+
+}
+*/
+
+.box{
+    width:150px;
+    height: 150px;
+    background-color: red;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
+    animation-fill-mode: forwards;
+    border-radius: 50%;
+    
+}
+.box:hover{
+   animation-play-state:paused ;
+} 
+
+
+/* @keyframes moveBox{
+    from{
+         transform: translateX(0px); 
+    }
+    to{
+       transform: translateX(200px); 
+       background-color: green;
+    } 
+
+     0%{
+        transform: translate(0px,0px);
+    }
+    25%{
+        
+        transform: translate(300px,0px);
+    
+    }
+    50%{
+        transform: translate(300px,300px);
+    }
+75%{
+        transform: translate(0px,300px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    } 
+} */
+
+@keyframes bounce{
+    from{
+        /* transform: translateY(0px); */
+        opacity: 1;
+    }
+    to{
+        /* transform: translateY(-30px); */
+        opacity: 0.5;
+    }
+}
+
+.typing{
+    width: 0%;
+    background-color: aqua;
+    overflow:hidden ;
+    white-space: nowrap;
+    animation: typing 5s infinite steps(30);
+    border-right: 4px solid black;
+}
+
+@keyframes typing{
+    form{
+        width: 0%;
+    }
+    to{
+        width: 50%;
+    }
+}
